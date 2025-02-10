@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,9 +10,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Document</title>
-</head>
+</head> -->
 
-<body class="bg-black flex items-center justify-center min-h-screen">
+<!-- <body class="bg-black flex items-center justify-center min-h-screen">
     <div class="text-center">
         <h1 class="text-7xl font-bold text-white mb-4 animate-bounce">
             Hello, I am <span class="text-red-600">Syed Samid Saud</span>
@@ -26,6 +26,113 @@
             </a>
         </div>
     </div>
-</body>
+</body> -->
 
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Samid Saud | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/@motion.dev/cdn/motion.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+        .glow-effect {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.5), transparent);
+            border-radius: 50%;
+            filter: blur(50px);
+            pointer-events: none;
+            transition: transform 0.1s linear;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen relative">
+
+    <div class="glow-effect" id="glow"></div>
+
+    <div class="text-center">
+        <h1 class="text-7xl font-bold text-white mb-4 transition-transform duration-500 hover:scale-110">
+            Hello, I am 
+            <span class="text-red-600 transition-colors duration-300 hover:text-blue-500">Syed Samid Saud</span>
+        </h1>
+        
+        <p class="text-xl text-gray-400 transition-opacity duration-500 hover:opacity-100">
+            Full-Stack Developer 
+        </p>
+
+      
+        <div class="flex justify-center gap-6 mt-6">
+            <a href="https://github.com/Syedsamid" target="_blank" 
+                class="bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                GitHub
+            </a>
+        </div>
+
+        <div class="flex justify-center gap-6 mt-6">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/syedsamid" target="_blank" 
+               class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-500 hover:border-blue-500 hover:scale-110">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/syed.samid.96" target="_blank" 
+               class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-600 hover:border-blue-600 hover:scale-110">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            
+            <!-- Twitter/X -->
+            <a href="https://x.com/Syedsamid_20" target="_blank" 
+               class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-400 hover:border-blue-400 hover:scale-110">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        
+            <!-- GitHub -->
+            <a href="https://github.com/Syedsamid" target="_blank" 
+               class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-gray-500 hover:border-gray-500 hover:scale-110">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        
+        
+
+  
+    <div id="particles" class="absolute inset-0 pointer-events-none"></div>
+
+    <script>
+       
+        document.addEventListener("mousemove", (e) => {
+            const glow = document.getElementById("glow");
+            glow.style.transform = `translate(${e.clientX - 100}px, ${e.clientY - 100}px)`;
+        });
+
+      
+        function createParticle() {
+            const particle = document.createElement("div");
+            particle.classList.add("absolute", "w-2", "h-2", "bg-white", "rounded-full", "opacity-30");
+            document.getElementById("particles").appendChild(particle);
+
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            particle.style.transform = `translate(${x}px, ${y}px)`;
+
+            setTimeout(() => {
+                particle.remove();
+            }, 5000);
+        }
+
+        setInterval(createParticle, 500);
+    </script>
+
+</body>
 </html>
