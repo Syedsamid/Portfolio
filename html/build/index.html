@@ -31,18 +31,21 @@
 <!-- </html> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syed Samid Saud | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/@motion.dev/cdn/motion.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        crossorigin="anonymous"></script>
     <style>
         body {
             background-color: black;
             overflow: hidden;
         }
+
         .glow-effect {
             position: absolute;
             width: 200px;
@@ -55,59 +58,60 @@
         }
     </style>
 </head>
+
 <body class="flex flex-col items-center justify-center min-h-screen px-4 relative text-center">
 
     <div class="glow-effect" id="glow"></div>
 
     <div>
         <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 transition-transform duration-500 hover:scale-110">
-            Hello, I am 
+            Hello, I am
             <span class="text-red-600 transition-colors duration-300 hover:text-blue-500">Syed Samid Saud</span>
         </h1>
-        
+
         <p class="text-lg md:text-xl text-gray-400 transition-opacity duration-500 hover:opacity-100">
             Full-Stack Developer
         </p>
     </div>
 
-    <!-- Social Icons -->
+
     <div class="flex flex-wrap justify-center gap-4 md:gap-6 mt-6">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/syedsamid" target="_blank" 
-           class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-500 hover:border-blue-500 hover:scale-110">
+
+        <a href="https://www.linkedin.com/in/syedsamid" target="_blank"
+            class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-500 hover:border-blue-500 hover:scale-110">
             <i class="fa-brands fa-linkedin"></i>
         </a>
-        
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/syed.samid.96" target="_blank" 
-           class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-600 hover:border-blue-600 hover:scale-110">
+
+
+        <a href="https://www.facebook.com/syed.samid.96" target="_blank"
+            class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-600 hover:border-blue-600 hover:scale-110">
             <i class="fa-brands fa-facebook"></i>
         </a>
-        
-        <!-- Twitter/X -->
-        <a href="https://x.com/Syedsamid_20" target="_blank" 
-           class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-400 hover:border-blue-400 hover:scale-110">
+
+
+        <a href="https://x.com/Syedsamid_20" target="_blank"
+            class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-blue-400 hover:border-blue-400 hover:scale-110">
             <i class="fa-brands fa-twitter"></i>
         </a>
 
-        <!-- GitHub -->
-        <a href="https://github.com/Syedsamid" target="_blank" 
-           class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-gray-500 hover:border-gray-500 hover:scale-110">
+
+        <a href="https://github.com/Syedsamid" target="_blank"
+            class="text-white text-3xl border-2 border-gray-400 rounded-full p-3 transition duration-300 hover:text-gray-500 hover:border-gray-500 hover:scale-110">
             <i class="fa-brands fa-github"></i>
         </a>
     </div>
 
-    <!-- Floating Particles -->
+
     <div id="particles" class="absolute inset-0 pointer-events-none"></div>
 
     <script>
-        // Mouse-follow glow effect
+
         document.addEventListener("mousemove", (e) => {
             const glow = document.getElementById("glow");
             glow.style.transform = `translate(${e.clientX - 100}px, ${e.clientY - 100}px)`;
         });
 
-        // Floating particles effect
+
         function createParticle() {
             const particle = document.createElement("div");
             particle.classList.add("absolute", "w-2", "h-2", "bg-white", "rounded-full", "opacity-30");
@@ -126,4 +130,5 @@
     </script>
 
 </body>
+
 </html>
